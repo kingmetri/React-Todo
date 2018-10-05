@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoForm from './components/TodoComponents/TodoForm';
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -49,18 +50,13 @@ this.setState({todos, input: ''}); // clearing...
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
 
-        <div className="form-container">
-        
-        <input name= "input"  onChange={this.changeInputHandler}/>
-        <button onClick= {this.addToHandler}>Add </button>
-        <button>Clear </button>
-        
-        
-        </div>
-      </div>
+
+     <TodoForm />
+
+
+
+
     );
   }
 }
